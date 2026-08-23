@@ -4,10 +4,10 @@
 //           interface cơ bản, getter/setter, mảng đối tượng.
 // ================================================================
 
-// ------------------------------------------------------------
+
 // Bài 1: Tạo lớp Person với thuộc tính name và age.
 //        Viết phương thức hiển thị thông tin.
-// ------------------------------------------------------------
+
 export class Person {
   name: string;
   age: number;
@@ -41,10 +41,8 @@ export class Student extends Person {
   }
 }
 
-// ------------------------------------------------------------
 // Bài 3: Lớp Car với thuộc tính brand, model, year.
 //        Phương thức hiển thị thông tin xe.
-// ------------------------------------------------------------
 export class Car {
   brand: string;
   model: string;
@@ -55,41 +53,35 @@ export class Car {
     this.model = model;
     this.year = year;
   }
-
   // Hiển thị thông tin xe ô tô
   showCarInfo(): void {
     console.log(`  Hãng: ${this.brand}, Mẫu xe: ${this.model}, Năm sản xuất: ${this.year}`);
   }
 }
 
-// ------------------------------------------------------------
-// Bài 4: Lớp Rectangle với width và height.
-//        Phương thức tính diện tích và chu vi.
-// ------------------------------------------------------------
+
+// Bài 4: Lớp Rectangle với width và height. Phương thức tính diện tích và chu vi.
 export class Rectangle {
   width: number;
   height: number;
-
   constructor(width: number, height: number) {
     this.width = width;
     this.height = height;
   }
-
   // Tính diện tích hình chữ nhật
   calculateArea(): number {
     return this.width * this.height;
   }
-
   // Tính chu vi hình chữ nhật
   calculatePerimeter(): number {
     return 2 * (this.width + this.height);
   }
 }
 
-// ------------------------------------------------------------
+
 // Bài 5: Lớp BankAccount với balance.
 //        Phương thức deposit() nạp tiền và withdraw() rút tiền.
-// ------------------------------------------------------------
+
 export class BankAccount {
   private balance: number; // Số dư là private, chỉ truy cập qua phương thức
 
@@ -127,9 +119,8 @@ export class BankAccount {
   }
 }
 
-// ------------------------------------------------------------
+
 // Bài 6: Lớp Book với thuộc tính title, author, year.
-// ------------------------------------------------------------
 export class Book {
   title: string;
   author: string;
@@ -147,22 +138,18 @@ export class Book {
   }
 }
 
-// ------------------------------------------------------------
+
 // Bài 7: Lớp User với thuộc tính private name và getter/setter.
 //        Minh hoạ tính đóng gói (encapsulation).
-// ------------------------------------------------------------
 export class User {
   private _name: string; // Thuộc tính private, đặt prefix _ theo convention
-
   constructor(name: string) {
     this._name = name;
   }
-
   // Getter: lấy giá trị name
   get name(): string {
     return this._name;
   }
-
   // Setter: cập nhật name kèm validation
   set name(value: string) {
     if (value.trim().length === 0) {
@@ -173,57 +160,46 @@ export class User {
   }
 }
 
-// ------------------------------------------------------------
 // Bài 8: Lớp Product với name, price.
 //        Tạo mảng sản phẩm và lọc sản phẩm có giá > 100.
-// ------------------------------------------------------------
 export class Product {
   name: string;
   price: number;
-
   constructor(name: string, price: number) {
     this.name = name;
     this.price = price;
   }
-
   // Hiển thị thông tin sản phẩm
   displayInfo(): void {
     console.log(`  Sản phẩm: ${this.name} - Giá: $${this.price}`);
   }
 }
-
 // Hàm tiện ích: lọc sản phẩm có giá lớn hơn ngưỡng cho trước
 export function filterProductsByPrice(products: Product[], minPrice: number): Product[] {
   return products.filter((p) => p.price > minPrice);
 }
 
-// ------------------------------------------------------------
+
 // Bài 9: Định nghĩa interface Animal với thuộc tính name
 //        và phương thức sound().
-// ------------------------------------------------------------
 export interface IAnimal {
   name: string;
   sound(): string; // Trả về chuỗi mô tả âm thanh
 }
-
 // Lớp cài đặt (implement) interface IAnimal
 export class SimpleAnimal implements IAnimal {
   name: string;
-
   constructor(name: string) {
     this.name = name;
   }
-
   // Cài đặt phương thức sound() từ interface
   sound(): string {
     return `${this.name} đang phát ra âm thanh tiếng kêu`;
   }
 }
 
-// ------------------------------------------------------------
 // Bài 10: Lớp Account minh hoạ public, private, readonly fields.
 //         Hiểu rõ sự khác biệt giữa các access modifiers.
-// ------------------------------------------------------------
 export class Account {
   public username: string;       // Public: truy cập từ bất kỳ đâu
   private password: string;      // Private: chỉ truy cập trong nội bộ class
