@@ -1,0 +1,24 @@
+{
+  "name": "23701801-mobiledev-labs",
+  "version": "1.0.0",
+  "description": "23701801 - Bài tập thực hành Lập trình Thiết bị Di động",
+  "private": true,
+  "scripts": {
+    "ex": "npx tsx week-02/run.ts",
+    "week1": "npx tsx week-01-oop-basics/src/index.ts",
+    "week1:basics": "npx tsx week-01-oop-basics/src/01-basics.ts",
+    "week1:inheritance": "npx tsx week-01-oop-basics/src/02-inheritance.ts",
+    "week1:polymorphism": "npx tsx week-01-oop-basics/src/03-polymorphism.ts",
+    "week1:advanced": "npx tsx week-01-oop-basics/src/04-advanced.ts",
+    "week2:promise": "npx tsx week-02/A_Basics_with_Promise.ts",
+    "week2:async": "npx tsx week-02/B_Async_Await.ts",
+    "week2:fetch": "npx tsx week-02/C_Fetch_API_Simulated_IO.ts",
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "@types/node": "^20.14.0",
+    "tsx": "^4.0.0"
+  }
+}
